@@ -2,7 +2,7 @@ body {
 	font-family: Roboto, sans-serif;
 	font-weight: 300;
 	box-sizing: border-box;
-	content: center;
+	margin: 0 auto;
 }
 
 header h1 {
@@ -11,6 +11,11 @@ header h1 {
 
 section {
 	display: flex;
+}
+
+footer {
+	font-weight: 900;
+	font-size: 0.5em;
 }
 
 .container {

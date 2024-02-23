@@ -10,10 +10,7 @@ header h1 {
 }
 
 section {
-	display: flex;
 	color: white;
-	width: 200px;
-	height: 200px;
 }
 
 section h2 {
@@ -29,10 +26,12 @@ footer {
 
 .container {
 	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
+	flex-direction: row;
 	flex-wrap: wrap;
+	flex-grow: 1;
 	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
 }
 
 .row {
@@ -47,6 +46,8 @@ footer {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
+	width: 300px;
+	min-height: 300px;
 }
 
 #aboutMe {

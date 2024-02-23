@@ -1,3 +1,14 @@
 h1 {
     color: red;
     }
+
+section {
+	display: flex;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 0 auto;
+}

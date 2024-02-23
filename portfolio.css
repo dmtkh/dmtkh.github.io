@@ -12,6 +12,8 @@ header h1 {
 section {
 	display: flex;
 	color: white;
+	min-width: 100px;
+	min-height: 100px;
 }
 
 section h2 {

@@ -13,6 +13,10 @@ section {
 	display: flex;
 }
 
+section h2 {
+	color: #77f;
+}
+
 footer {
 	font-weight: 900;
 	font-size: 0.5em;

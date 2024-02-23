@@ -1,4 +1,11 @@
-h1 {
+body {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	box-sizing: border-box;
+	content: center;
+}
+
+header h1 {
     color: red;
     }
 
@@ -11,4 +18,18 @@ section {
 	flex-direction: column;
 	flex-grow: 1;
 	margin: 0 auto;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	justify-content: space-around;
+}
+
+.flex-item {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
 }

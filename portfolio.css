@@ -43,3 +43,15 @@ footer {
 	flex-grow: 1;
 	flex-direction: column;
 }
+
+#aboutMe {
+	background-color: #110;
+}
+
+#mySkills {
+	background-color: #101;
+}
+
+#myLinks {
+	background-color: #011;
+}

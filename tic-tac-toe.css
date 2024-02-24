@@ -1,0 +1,87 @@
+body {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	box-sizing: border-box;
+    text-align: center;
+}
+
+.title {
+    color: green;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 5px;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-grid {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.game-square {
+    text-align: center;
+    vertical-align: middle;
+    color: yellow;
+    font-size: 30px;
+}
+
+.resetBoard {
+    background-color: black;
+    color: red;
+    font-size: 1.5em;
+}
+
+.r1c1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.r1c2 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.r1c3 {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.r2c1 {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.r2c2 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.r2c3 {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.r3c1 {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.r3c2 {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.r3c3 {
+    grid-row: 3;
+    grid-column: 3;
+}
+.resetBtn {
+    grid-row: 4;
+    grid-column: 1 / span 3;
+}

@@ -1,11 +1,12 @@
 var currentSymbol = "X";
+var gameOver = false;
 const boardStatus = ['', '', '','', '', '','', '', ''];
 
 const updateSquare = (event) => {
 
     const elementToUpdate = document.getElementById(event.currentTarget.id+"-symbol");
 
-    if ( !(checkForWin()) && (elementToUpdate.innerHTML === '*') ) {
+    if ( (elementToUpdate.innerHTML === '*') && !gameOver ) {
         elementToUpdate.innerHTML = currentSymbol;
         switch (event.currentTarget.id) {
             case 'r1c1': boardStatus[0] = currentSymbol; break;
@@ -18,16 +19,17 @@ const updateSquare = (event) => {
             case 'r3c2': boardStatus[7] = currentSymbol; break;
             case 'r3c3': boardStatus[8] = currentSymbol; break;
         }
-        if (checkForWin()) {
-            alert('You won!');
-        }
+        
         if (currentSymbol === 'X') {
             currentSymbol = 'O';
         } else {
             currentSymbol = 'X';
         }
-
-        document.getElementById("currentPlayerSymbol").innerHTML = currentSymbol;
+      document.getElementById("currentPlayerSymbol").innerHTML = currentSymbol;
+				gameOver = checkForWin();
+				if (gameOver) {
+					document.getElementById("show-turn").innerHTML = '<p>Game Over</p>';
+        }
     }
 }
 
@@ -44,8 +46,11 @@ const resetBoardFn = (event) => {
     for (x=0; x<9; x++) {
         boardStatus[x] = '';
     }
+		gameOver = false;
     currentSymbol = 'X'
-    document.getElementById("currentPlayerSymbol").innerHTML = currentSymbol;
+		resetStatusText = '<p>The current turn is: <span id="currentPlayerSymbol"></span></p>';
+	document.getElementById("show-turn").innerHTML = resetStatusText;
+	document.getElementById("currentPlayerSymbol").innerHTML = currentSymbol;
 
 }
 
